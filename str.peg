@@ -1,0 +1,11 @@
+package main
+
+type Str Peg {
+
+}
+
+line <- (expr ws expr / expr) !.
+
+expr <- [a-z]+
+
+ws <- ( ' ' / '\t' )*
