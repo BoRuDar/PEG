@@ -4,8 +4,12 @@ type Str Peg {
 
 }
 
-line <- (expr ws expr / expr) !.
+line <-  expr !.
 
-expr <- [a-z]+
+expr <- (kv / ws? ',' ws? kv)*
+
+kv <- (string ws? '=' ws? string)
+
+string <- [a-z0-9]+
 
 ws <- ( ' ' / '\t' )*
