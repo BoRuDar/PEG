@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	str := &Str{Buffer: "abc cba"}
+	str := &Str{Buffer: "aaa bbb"}
 	str.Init()
 
 
